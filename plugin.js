@@ -28,7 +28,7 @@ module.exports = function plugin(snowpackConfig, options) {
               // don't touch absolute URLs
               return url;
             } else {
-              return path.join(relativePath, url).split(path.sep).slice(2).join(path.posix.sep);
+              return path.join(relativePath, url).split(path.sep).slice(1).join(path.posix.sep);
             }
           });
           return newContents;
